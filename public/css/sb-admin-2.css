@@ -204,6 +204,7 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  width: 100%;
 }
 
 svg {
@@ -10590,7 +10591,7 @@ a:focus {
 }
 
 .bg-register-image {
-  background: url("../image/bg-register.jpg");
+  background-color: blueviolet;
   background-position: center;
   background-size: cover;
 }

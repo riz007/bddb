@@ -10,7 +10,7 @@
           <div class="col-lg-7">
             <div class="p-5">
               <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">Register as a Bangladeshi Citizen in Thailand</h1>
+                <h1 class="h4 text-gray-900 mb-4">Register in Thailand</h1>
               </div>
                 @if(session()->has('detail'))
                     <div class="alert alert-success">
