@@ -1,7 +1,7 @@
 @extends('layouts.common')
 
 @section('content')
-<body class="bg-gradient-primary">
+<body class="bg-gradient-success">
 
   <div class="container">
 
@@ -44,13 +44,10 @@
                         <label class="custom-control-label" for="remember"> {{ __('Remember Me') }}</label>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                    <button type="submit" class="btn btn-success btn-user btn-block">
                         {{ __('Login') }}
                     </button>
                   </form>
-                  <div class="text-center">
-                    <a class="small" href="{{ route('password.request') }}">{{ __('Forgot Your Password?') }}</a>
-                  </div>
                 </div>
               </div>
             </div>
