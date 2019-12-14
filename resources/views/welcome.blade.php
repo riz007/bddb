@@ -112,7 +112,7 @@
                     <label>Upload your photo</label>
                     <input type="file" name="image" id="image">
                 </div>
-                <button type="submit" class="btn btn-primary btn-user btn-block">
+                <button type="submit" class="btn btn-success btn-user btn-block">
                   Register Account
                 </button>
                 {!! Form::close() !!}
