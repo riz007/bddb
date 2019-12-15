@@ -17,6 +17,30 @@ class UserFormController extends Controller
     public function index(Request $request)
     {
         $user_records = UserForm::all();
+        $search = $request->q;
+        if(!empty($search))
+        {
+            $user_records = UserForm::where('name', 'LIKE', '%'.$search.'%')
+                        ->orWhere('spouse_name', 'LIKE', '%'.$search.'%')
+                        ->orWhere('position', 'LIKE', '%'.$search.'%')
+                        ->orWhere('organization', 'LIKE', '%'.$search.'%')
+                        ->orWhere('business_address', 'LIKE', '%'.$search.'%')
+                        ->orWhere('residence_address', 'LIKE', '%'.$search.'%')
+                        ->orWhere('permanent_address', 'LIKE', '%'.$search.'%')
+                        ->orWhere('phone', 'LIKE', '%'.$search.'%')
+                        ->orWhere('email', 'LIKE', '%'.$search.'%')
+                        ->orWhere('years', 'LIKE', '%'.$search.'%')
+                        ->orWhere('facebook', 'LIKE', '%'.$search.'%')
+                        ->orWhere('viber', 'LIKE', '%'.$search.'%')
+                        ->orWhere('line', 'LIKE', '%'.$search.'%')
+                        ->orWhere('skype', 'LIKE', '%'.$search.'%')
+                        ->orWhere('passport_number', 'LIKE', '%'.$search.'%')
+                        ->orWhere('date', 'LIKE', '%'.$search.'%')
+                        ->paginate(20);
+            return view('user_records',compact('user_records'));
+        }else{
+            $user_records = UserForm::paginate(20);
+        }
         return view('user_records',compact('user_records'));
     }
 

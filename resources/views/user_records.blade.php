@@ -57,6 +57,7 @@
         @endforeach
       </tbody>
     </table>
+    {{ $user_records->links() }}
   </div>
 </div>
 <!-- Delete Modal-->
