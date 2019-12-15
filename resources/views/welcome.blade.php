@@ -6,7 +6,11 @@
       <div class="card-body p-0">
         <!-- Nested Row within Card Body -->
         <div class="row">
-          <div class="col-lg-5 d-none d-lg-block bg-gradient-success"></div>
+          <div class="col-lg-5 d-none d-lg-block bg-gradient-success">
+            <div class="text-center" style="margin-top: 200px;">
+                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="image/undraw_work_chat_erdt.svg" alt="personal-registration">
+            </div>
+          </div>
           <div class="col-lg-7">
             <div class="p-5">
               <div class="text-center">

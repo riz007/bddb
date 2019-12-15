@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="{{asset('/css/sb-admin-2.css')}}" rel="stylesheet">
+  <link href="{{asset('/css/main.css')}}" rel="stylesheet">
 <!-- Custom styles for this page -->
 <link href="{{asset('/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
 
@@ -120,8 +120,8 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline small" style="color:#1cc88a;">Welcome Admin!</span>
-                <i class="fas fa-user fa-lg fa-fw mr-2" style="color:#1cc88a;"></i>
+                <span class="mr-2 d-none d-lg-inline small text-success">Welcome Admin!</span>
+                <i class="fas fa-user fa-lg fa-fw mr-2 text-success"></i>
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

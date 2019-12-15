@@ -85,7 +85,7 @@ class UserFormController extends Controller
 
     public function export_excel(Request $request)
     {
-        return \Excel::download(new UserFromExport, 'users.xlsx');
+        return \Excel::download(new UserFromExport, 'bangladeshis.xlsx');
     }
     
 }

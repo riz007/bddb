@@ -24,25 +24,25 @@ class UserFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'          => 'required',
-            'spouse_name'          => 'required',
+            'name'              => 'required',
+            'spouse_name'       => 'required',
             'position'          => 'required',
-            'organization'          => 'required',
-            'business_address'          => 'required',
-            'residence_address'          => 'required',
-            'permanent_address'          => 'required',
+            'organization'      => 'required',
+            'business_address',
+            'residence_address',
+            'permanent_address' => 'required',
             'phone',
-            'mobile_number'          => 'required',
-            'email'          => 'required',
-            'years'          => 'required',
+            'mobile_number'     => 'required',
+            'email'             => 'required',
+            'years'             => 'required',
             'facebook',
             'viber',
             'line',
             'skype',
             'feedback',
             'image',
-            'passport_number'          => 'required',
-            'date' => 'required'
+            'passport_number'   => 'required',
+            'date'              => 'required'
         ];
     }
 }

@@ -1,10 +1,4 @@
 /*!
- * Start Bootstrap - SB Admin 2 v4.0.7 (https://startbootstrap.com/template-overviews/sb-admin-2)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-sb-admin-2/blob/master/LICENSE)
- */
-
-/*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
@@ -159,7 +153,7 @@ sup {
 }
 
 a {
-  color: #4e73df;
+  color: #1cc88a ;
   text-decoration: none;
   background-color: transparent;
 }
@@ -204,7 +198,6 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
-  width: 100%;
 }
 
 svg {
@@ -4629,8 +4622,8 @@ input[type="button"].btn-block {
 .page-item.active .page-link {
   z-index: 1;
   color: #fff;
-  background-color: #4e73df;
-  border-color: #4e73df;
+  background-color: #1cc88a;
+  border-color: #1cc88a;
 }
 
 .page-item.disabled .page-link {
@@ -10585,21 +10578,25 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url("../image/bg.jpg");
+  background-color: #1cc88a;
+  background: url("../image/undraw_personal_info_0okl.svg");
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .bg-register-image {
-  background-color: blueviolet;
+  background-color: #1cc88a;
   background-position: center;
   background-size: cover;
 }
 
 .bg-password-image {
-  background: url("../image/bg.jpg");
+  background-color: #1cc88a;
+  background: url("../image/undraw_voice_interface_eckp.svg");
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 form.user .custom-checkbox.small label {

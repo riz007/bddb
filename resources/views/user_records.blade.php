@@ -1,14 +1,10 @@
 @extends('layouts/backend')
 @section('content')
-<!-- Custom fonts for this template -->
-<link href="{{asset('/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
 <div class="card-body">
   <div class="d-sm-flex align-items-center justify-content-between mb-4 py-3">
-    <h1 class="h3 mb-0" style="color:#1cc88a;">User Records</h1>
+    <h1 class="h3 mb-0 m-0 font-weight-bold text-success">User Records</h1>
     <a href="{{route('user-records.create')}}" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i class="fas fa-plus fa-sm text-white-50"></i>Add User</a>
-    <a href="{{ url('/export-excel') }}" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+    <a href="{{ url('/export-excel') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Download Data</a>
   </div>
   <div class="table-responsive">
     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -47,12 +43,12 @@
           <td>
             <span>
             <a style="text-decoration: none;" href="{{ route('user-records.edit', $record->id)}}">
-                <i class="fas fa-edit fa-2x" style="color: #36b9cc;"></i>
+                <i class="fas fa-edit fa-2x text-info"></i>
               </a>
             </span>
             <span>
               <a style="text-decoration: none; margin-left: 15px;" href="javascript:void(0);" data-toggle="modal" data-target="#deleteModal">
-                <i style="cursor: pointer; color: #e74a3b;" class="fa fa-trash fa-2x"></i>
+                <i style="cursor: pointer;" class="fa fa-trash fa-2x text-danger"></i>
               </a>
             </span>
           </td>
@@ -75,11 +71,11 @@
     </div>
     <div class="modal-body">Select "Delete" below if you are ready to delete the current Bangladeshi's info.</div>
     <div class="modal-footer">
-      <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+      <button class="btn btn-danger" type="button" data-dismiss="modal">Cancel</button>
       <form style="display: inline; margin-left: 15px;" action="{{ route('user-records.destroy' , $record->id ) }}" method="POST" >
         {{ csrf_field() }}
         {{ method_field('DELETE') }}
-        <button class="btn btn-danger" type="submit">Delete</button>
+        <button class="btn btn-secondary" type="submit">Delete</button>
       </form>
   </div>
 </div>
