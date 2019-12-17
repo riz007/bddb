@@ -51,6 +51,28 @@
                 <i style="cursor: pointer;" class="fa fa-trash fa-2x text-danger"></i>
               </a>
             </span>
+            <!-- Delete Modal-->
+            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Are you sure?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">Select "Delete" below if you are ready to delete the current Bangladeshi's info.</div>
+                  <div class="modal-footer">
+                    <button class="btn btn-danger" type="button" data-dismiss="modal">Cancel</button>
+                    <form style="display: inline; margin-left: 15px;" action="{{ route('user-records.destroy' , $record->id ) }}" method="POST" >
+                      {{ csrf_field() }}
+                      {{ method_field('DELETE') }}
+                      <button class="btn btn-secondary" type="submit">Delete</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
           </td>
         </tr>
         @php $i = $i+1; @endphp
@@ -59,27 +81,5 @@
     </table>
     {{ $user_records->links() }}
   </div>
-</div>
-<!-- Delete Modal-->
-<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="deleteModalLabel">Are you sure?</h5>
-      <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">×</span>
-      </button>
-    </div>
-    <div class="modal-body">Select "Delete" below if you are ready to delete the current Bangladeshi's info.</div>
-    <div class="modal-footer">
-      <button class="btn btn-danger" type="button" data-dismiss="modal">Cancel</button>
-      <form style="display: inline; margin-left: 15px;" action="{{ route('user-records.destroy' , $record->id ) }}" method="POST" >
-        {{ csrf_field() }}
-        {{ method_field('DELETE') }}
-        <button class="btn btn-secondary" type="submit">Delete</button>
-      </form>
-  </div>
-</div>
-</div>
 </div>
 @endsection
